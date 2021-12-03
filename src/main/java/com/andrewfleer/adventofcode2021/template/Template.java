@@ -16,7 +16,7 @@ public class Template {
     @Autowired
     private ResourceLoader resourceLoader;
 
-    public int method() {
+    public int doTask() {
         try {
             Resource resource = resourceLoader.getResource("classpath:folder/fileName.txt");
             File inputFile = resource.getFile();

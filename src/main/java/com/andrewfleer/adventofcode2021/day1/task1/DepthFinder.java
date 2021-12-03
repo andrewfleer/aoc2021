@@ -17,7 +17,7 @@ public class DepthFinder {
     @Autowired
     private ResourceLoader resourceLoader;
 
-    public int findDepth() {
+    public int doTask() {
         Integer currentDepth = null;
         int numberOfIncreases = 0;
         try {

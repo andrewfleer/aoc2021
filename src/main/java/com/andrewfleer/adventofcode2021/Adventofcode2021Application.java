@@ -2,6 +2,7 @@ package com.andrewfleer.adventofcode2021;
 
 import com.andrewfleer.adventofcode2021.day1.task1.DepthFinder;
 import com.andrewfleer.adventofcode2021.day1.task2.DepthWindowFinder;
+import com.andrewfleer.adventofcode2021.day2.task1.PositionFinder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,7 +13,7 @@ import org.springframework.context.event.EventListener;
 public class Adventofcode2021Application {
 
     @Autowired
-    DepthWindowFinder depthWindowFinder;
+    PositionFinder task;
 
     public static void main(String[] args) {
         SpringApplication.run(Adventofcode2021Application.class, args);
@@ -20,7 +21,7 @@ public class Adventofcode2021Application {
 
     @EventListener(ApplicationReadyEvent.class)
     public void runTask() {
-        System.out.println("The answer for this task is: " + depthWindowFinder.findDepthWindow());
+        System.out.println("The answer for this task is: " + task.doTask());
     }
 
 }

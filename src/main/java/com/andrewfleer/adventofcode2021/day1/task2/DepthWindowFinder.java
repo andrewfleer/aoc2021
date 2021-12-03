@@ -16,7 +16,7 @@ public class DepthWindowFinder {
     @Autowired
     ResourceLoader resourceLoader;
 
-    public int findDepthWindow() {
+    public int doTask() {
         int numberOfIncreases = 0;
         int windowSize = 3;
         List<Integer> depths = new ArrayList<>();
