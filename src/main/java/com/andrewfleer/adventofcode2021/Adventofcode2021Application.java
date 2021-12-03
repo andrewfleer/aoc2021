@@ -3,6 +3,7 @@ package com.andrewfleer.adventofcode2021;
 import com.andrewfleer.adventofcode2021.day1.task1.DepthFinder;
 import com.andrewfleer.adventofcode2021.day1.task2.DepthWindowFinder;
 import com.andrewfleer.adventofcode2021.day2.task1.PositionFinder;
+import com.andrewfleer.adventofcode2021.day2.task2.AimFinder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,7 +14,7 @@ import org.springframework.context.event.EventListener;
 public class Adventofcode2021Application {
 
     @Autowired
-    PositionFinder task;
+    AimFinder task;
 
     public static void main(String[] args) {
         SpringApplication.run(Adventofcode2021Application.class, args);

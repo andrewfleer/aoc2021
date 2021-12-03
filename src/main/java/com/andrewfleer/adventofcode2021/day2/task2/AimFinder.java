@@ -1,4 +1,4 @@
-package com.andrewfleer.adventofcode2021.day2.task1;
+package com.andrewfleer.adventofcode2021.day2.task2;
 
 import com.andrewfleer.adventofcode2021.day2.Direction;
 import com.andrewfleer.adventofcode2021.day2.Position;
@@ -13,11 +13,10 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 import java.util.Scanner;
 
 @Service
-public class PositionFinder {
+public class AimFinder {
 
     @Autowired
     private ResourceLoader resourceLoader;
@@ -55,17 +54,19 @@ public class PositionFinder {
     private int calculatePosition(List<Position> positions) {
         int horizontal = 0;
         int vertical = 0;
+        int aim = 0;
 
         for (Position position : positions) {
             switch (position.getDirection()) {
                 case UP:
-                    vertical = vertical - position.getValue();
+                    aim -= position.getValue();
                     break;
                 case DOWN:
-                    vertical = vertical + position.getValue();
+                    aim += position.getValue();
                     break;
                 case FORWARD:
-                    horizontal = horizontal + position.getValue();
+                    horizontal += position.getValue();
+                    vertical += aim * position.getValue();
             }
         }
 

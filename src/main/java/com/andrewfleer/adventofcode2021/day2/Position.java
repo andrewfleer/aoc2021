@@ -1,4 +1,4 @@
-package com.andrewfleer.adventofcode2021.day2.task1;
+package com.andrewfleer.adventofcode2021.day2;
 
 import lombok.Data;
 
