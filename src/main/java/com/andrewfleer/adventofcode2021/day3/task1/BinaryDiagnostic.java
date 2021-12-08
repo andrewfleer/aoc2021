@@ -21,7 +21,6 @@ public class BinaryDiagnostic {
     private ResourceLoader resourceLoader;
 
     public int doTask() {
-        BitSet bitSet = new BitSet();
         List<Integer> indexSums = new ArrayList<>();
         try {
             int lines = 0;

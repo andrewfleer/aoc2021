@@ -6,4 +6,6 @@ import lombok.Data;
 public class DiagnosticReport {
     private String gamma;
     private String epsilon;
+    private String oxygen;
+    private String co2;
 }
