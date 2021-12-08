@@ -1,11 +1,5 @@
 package com.andrewfleer.adventofcode2021;
 
-import com.andrewfleer.adventofcode2021.day1.task1.DepthFinder;
-import com.andrewfleer.adventofcode2021.day1.task2.DepthWindowFinder;
-import com.andrewfleer.adventofcode2021.day2.task1.PositionFinder;
-import com.andrewfleer.adventofcode2021.day2.task2.AimFinder;
-import com.andrewfleer.adventofcode2021.day3.task1.BinaryDiagnostic;
-import com.andrewfleer.adventofcode2021.day3.task2.AdvancedBinaryDiagnostic;
 import com.andrewfleer.adventofcode2021.day4.task1.GiantSquidBingo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
