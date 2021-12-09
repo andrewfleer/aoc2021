@@ -1,6 +1,6 @@
 package com.andrewfleer.adventofcode2021;
 
-import com.andrewfleer.adventofcode2021.day4.task2.GiantSquidBingoLoser;
+import com.andrewfleer.adventofcode2021.day5.task1.HydrothermalVents;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,7 +11,7 @@ import org.springframework.context.event.EventListener;
 public class Adventofcode2021Application {
 
     @Autowired
-    GiantSquidBingoLoser task;
+    HydrothermalVents task;
 
     public static void main(String[] args) {
         SpringApplication.run(Adventofcode2021Application.class, args);
