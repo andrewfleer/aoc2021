@@ -16,7 +16,7 @@ public class LanternFishCounter {
     @Autowired
     private ResourceLoader resourceLoader;
 
-    public int doTask() {
+    public long doTask() {
         try {
             String[] startingFish = new String[0]; // idk, just make an array.
             Resource resource = resourceLoader.getResource("classpath:day6Input/task.txt");
@@ -27,9 +27,9 @@ public class LanternFishCounter {
                 startingFish = line.split(",");
             }
 
-            int[] fish = seedFish(startingFish);
+            long[] fish = seedFish(startingFish);
 
-            return simulateLife(fish, 80);
+            return simulateLife(fish, 256);
         } catch (FileNotFoundException fnfe) {
             System.out.println("Can't find file");
             fnfe.printStackTrace();
@@ -40,10 +40,10 @@ public class LanternFishCounter {
         return 0;
     }
 
-    private int simulateLife(int[] fish, int days) {
+    private long simulateLife(long[] fish, int days) {
         for (int i = 0; i < days; i++) {
-            int babyFish = fish[0]; // These fish made babies
-            int fishThatJustHadBirth = fish[0]; // These fish are ready to start over
+            long babyFish = fish[0]; // These fish made babies
+            long fishThatJustHadBirth = fish[0]; // These fish are ready to start over
             for (int fishAge = 1; fishAge < fish.length; fishAge++) {
                 fish[fishAge - 1] = fish[fishAge]; // These fish move a day down the "ticker";
             }
@@ -53,16 +53,16 @@ public class LanternFishCounter {
         }
 
         // Add all the fish together
-        int totalFish = 0;
-        for (int j : fish) {
+        long totalFish = 0;
+        for (long j : fish) {
             totalFish += j;
         }
 
         return totalFish;
     }
 
-    private int[] seedFish(String[] startingFish) {
-        int[] fish = new int[9];
+    private long[] seedFish(String[] startingFish) {
+        long[] fish = new long[9];
 
         for (String s : startingFish) {
             int fishAge = Integer.parseInt(s);
