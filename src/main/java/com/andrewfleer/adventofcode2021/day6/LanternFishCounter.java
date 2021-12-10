@@ -1,4 +1,4 @@
-package com.andrewfleer.adventofcode2021.day6.task1;
+package com.andrewfleer.adventofcode2021.day6;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
